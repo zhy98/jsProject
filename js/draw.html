@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.box{
+			margin: 20px;
+			position: relative;
+			width: 1224px;
+			height: 630px;
+			overflow: hidden;
+		}
+		.top{
+			position: absolute;
+			width:99999px;
+			height: 500px;
+			left: 0;
+			top: 0;
+		}
+		.top>img{
+			float: left;
+		}
+		.bottom{
+			height: 167px;
+			width:1224px;
+			position: absolute;
+			bottom: 0;left: 0;
+		}
+		.navbar {
+			height: 168px;
+			width: 1224px;
+		}
+		.nav{
+			float: left;width: 204px;height: 162px;
+			background-position:right center;
+		}
+		.nav0{background-image: url("sbanner_00.png");}
+		.nav1{background-image: url("sbanner_01.png");}
+		.nav2{background-image: url("sbanner_02.png");}
+		.nav3{background-image: url("sbanner_03.png");}
+		.nav4{background-image: url("sbanner_04.png");}
+		.nav5{background-image: url("sbanner_05.png");}
+
+		.progress{
+			width:204px;
+			height: 5px;
+			position:absolute;
+			bottom: 0;
+		}
+		.run{
+			width:0px;
+			height: 5px;
+		}
+		.nav0 .progress{background-color: #7b5596;}
+		.nav1 .progress{background-color: #83a2cc;}
+		.nav2 .progress{background-color: #e18e40;}
+		.nav3 .progress{background-color: #47acab;}
+		.nav4 .progress{background-color: #c86c8c;}
+		.nav5 .progress{background-color: #9089d6;}
+		.nav1 .run{background-color: #49047a;}
+		.nav2 .run{background-color: #14478f;}
+		.nav3 .run{background-color: #00605f;}
+		.nav4 .run{background-color: #a41a4a;}
+		.nav5 .run{background-color: #4a419e;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="top" style="left: 0px" id="turnImag">
+			<img src="banner_00.jpg" id="ome">
+			<img src="banner_01.jpg">
+			<img src="banner_02.jpg">
+			<img src="banner_03.jpg">
+			<img src="banner_04.jpg">
+			<img src="banner_05.jpg">
+		</div>
+		<div class="bottom">
+			<div class="navbar">
+				<div class="nav nav0" data-index="0">
+					<div class="progress">
+						<div class="run"></div>
+					</div>
+				</div>
+				<div class="nav nav1" data-index="1">
+					<div class="progress">
+						<div class="run"></div>
+					</div>
+				</div>
+				<div class="nav nav2" data-index="2">
+					<div class="progress">
+						<div class="run"></div>
+					</div>
+				</div>
+				<div class="nav nav3" data-index="3">
+					<div class="progress">
+						<div class="run"></div>
+					</div>
+				</div>
+				<div class="nav nav4" data-index="4">
+					<div class="progress">
+						<div class="run"></div>
+					</div>
+				</div>
+				<div class="nav nav5" data-index="5">
+					<div class="progress">
+						<div class="run"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var num = 1;
+		var turnleft = 0;
+		var img = document.getElementById("turnImag");
+			setInterval(function(){
+				if(num<6){
+					img.style.left = -turnleft+'px';
+					num++;
+					turnleft =turnleft+1224;
+ 				}else{
+ 					num =1;
+ 					turnleft=0;
+ 				}
+			},2000);
+
+		
+		</script>
+</body>
+</html>
